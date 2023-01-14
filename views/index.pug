@@ -2,4 +2,9 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  ul
+    each message, i in messages 
+      h3 #{message.user}: #{message.text}
+      h6 Message sent on #{message.added}
+  a(href="/new") Make a new post
+

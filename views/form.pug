@@ -1,0 +1,10 @@
+extends layout 
+
+block content 
+    form(method="POST" action="/new")
+        legend Make a post 
+        label(for="name") Name 
+        input(type="text" id="name" name="name")
+        label(for="msg") Message 
+        input(type="text" id="text" name="text")
+        input(type="submit" value="Submit")
